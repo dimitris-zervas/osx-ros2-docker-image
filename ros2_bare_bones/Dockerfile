@@ -39,13 +39,3 @@ RUN echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 # Set up your workspace
 RUN mkdir -p /home/ros2_ws/src
 WORKDIR /home/ros2_ws
-# RUN /bin/bash -c ". /opt/ros/melodic/setup.bash; catkin_make"
-
-
-# RUN apt install -y python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
-# RUN apt install -y python-rosdep
-# RUN rosdep init
-# RUN rosdep update
-
-
-# # source devel/setup.bash
