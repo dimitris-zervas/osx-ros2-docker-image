@@ -1,21 +1,21 @@
 # Rviz in novnc
 
-This documentation will guide you on how to display x11 application running on docker container, in your browser. The application will be `rviz2` and we will use a `novnc` docker image that will host the novnc server.
+This documentation will guide you on how to display an x11 application running on the docker container, in your browser. The application will be `rviz2` and we will use a `novnc` docker image that will host the novnc server.
 
 
 # Prerequisites
 
-We are going to use a docker-compose file that it requires the `ros2-osx-full` to be already built in your system. To check if you have this image, you cun run in a terminal:
+We are going to use a docker-compose file that requires the `ros2-osx-full` to be already built into your system. To check if you have this image, you can run it in a terminal:
 
 ```bash
 docker images | grep ros2-osx-full
 ```
 
-If you cannot find this image, you can find instruction [here](../README.md#ros2-desktop-install) on how to build it.
+If you cannot find this image, you can find instructions [here](../README.md#ros2-desktop-install) on how to build it.
 
 # Run the services
 
-We will run two service using the `docker-compose.yaml` file:
+We will run two services using the `docker-compose.yaml` file:
 
 * ros: this will run a container out of the `ros2-osx-full` image
 * novnc: this will host the novnc server
@@ -42,7 +42,7 @@ To run the rviz2 from the container of the `ros` service, you need to get access
 docker container list
 ```
 
-The output of the above command should have a line that looks like:
+The output of the above command should have a line that looks like this:
 
 ```
 eb57ee93ab87   ros2-osx-full         "tail -f /dev/null"    3 seconds ago   Up 2 seconds                           ros2_with_rviz-ros-1
