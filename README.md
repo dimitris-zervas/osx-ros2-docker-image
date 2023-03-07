@@ -14,7 +14,7 @@ Those Dockerfiles were tested on:
 
 ## ROS2 Desktop Install
 
-This image follows the Desktop Install (Recommended): ROS, RViz, demos and tutorials.
+This image follows the **full** Desktop Install (Recommended): ROS, Rviz, Gazebo, demos and tutorials.
 
 To build the image, run the following command from a terminal that points to the root directory of this repository (where this README file is):
 
@@ -70,4 +70,4 @@ If everything was created/installed/set up properly, you should see the second c
 
 # Next Steps
 
-You can see how you can use Rviz2 and ros2 here [here](./ros2_with_rviz/REASME.md)
+You can see how you can use Rviz2 Gazebo and ros2 here [here](./ros2_gazebo_rviz/README.md)

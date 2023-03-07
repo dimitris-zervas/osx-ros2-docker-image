@@ -24,8 +24,15 @@ RUN sh -c 'echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/key
 RUN apt update
 RUN apt upgrade -y
 
-# Desktop Install (Recommended): ROS, RViz, demos, tutorials.
-RUN DEBIAN_FRONTEND=noninteractive apt install -y ros-humble-desktop
+# Desktop Install (Recommended): ROS, RViz, demos, tutorials, gazebo.
+RUN DEBIAN_FRONTEND=noninteractive apt install -y ros-humble-desktop-full
+
+# rosdep and colcon
+RUN apt install -y python3-rosinstall python3-rosinstall-generator python3-wstool
+RUN apt install -y python3-rosdep
+RUN rosdep init
+RUN rosdep update
+RUN apt install -y python3-colcon-common-extensions
 
 # Whenever you run a new contaner with an interactive terminal,
 # this command will be run to set up your ros environment.
