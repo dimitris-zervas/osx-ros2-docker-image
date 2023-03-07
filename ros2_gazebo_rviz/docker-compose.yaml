@@ -1,0 +1,33 @@
+version: '3'
+services:
+  ros:
+    image: ros2-osx-full
+    command: tail -f /dev/null
+    volumes: 
+      - ../src:/home/ros2_ws/src
+    environment:
+      - DISPLAY=novnc:0.0
+    networks:
+      - x11
+  
+  gazebo:
+    image: ros2-osx-full
+    command: tail -f /dev/null
+    environment:
+      - DISPLAY=novnc:0.0
+    networks:
+      - x11
+  
+  novnc:
+    image: theasp/novnc:latest
+    environment:
+      - DISPLAY_WIDTH=1280
+      - DISPLAY_HEIGHT=720
+      - RUN_XTERM=yes
+    ports:
+      - "8080:8080"
+    networks:
+      - x11
+
+networks:
+  x11:
