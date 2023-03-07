@@ -30,3 +30,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt install -y ros-humble-desktop
 # Whenever you run a new contaner with an interactive terminal,
 # this command will be run to set up your ros environment.
 RUN echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+
+# Set up your workspace
+RUN mkdir -p /home/ros2_ws/src
+WORKDIR /home/ros2_ws
