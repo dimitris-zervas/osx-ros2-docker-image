@@ -32,7 +32,7 @@ To make sure that everything is set up properly you can:
 
 ## novnc server
 
-Go to your browser and open the `0.0.0.0:8080` page.
+Go to your browser and open the `http://localhost:8080/vnc.html` page.
 
 ## Run rviz2 from the ros service
 
@@ -62,7 +62,7 @@ Now you can run the `rviz2` app:
 ros2 run rviz2 rviz2
 ```
 
-Go back to your browser under the `0.0.0.0:8080` URL and you should see the `rviz` up and running.
+Go back to your browser under the `http://localhost:8080/vnc.html` URL and you should see the `rviz` up and running.
 
 
 # Clean up
